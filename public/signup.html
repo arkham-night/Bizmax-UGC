@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up - Bizmax UGC</title>
+  <link rel="icon" href="assets/images/favicon.ico" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-200">
+  <header class="sticky top-0 z-50 bg-gray-800">
+    <nav class="container mx-auto flex justify-between items-center py-4">
+      <div class="text-2xl font-bold">Bizmax UGC</div>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="hover:text-gold">Home</a></li>
+        <li><a href="login.html" class="hover:text-gold">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="min-h-screen flex items-center justify-center">
+    <div class="w-full max-w-md bg-gray-800 p-8 rounded shadow">
+      <h2 class="text-3xl font-bold mb-6 text-center">Create Account</h2>
+      <form id="signupForm" class="space-y-4">
+        <input type="text" id="name" placeholder="Name" class="w-full p-3 rounded bg-gray-700" required />
+        <input type="email" id="email" placeholder="Email (Gmail or Business)" class="w-full p-3 rounded bg-gray-700" required />
+        <input type="password" id="password" placeholder="Password" class="w-full p-3 rounded bg-gray-700" required />
+        <div class="flex items-center">
+          <input type="checkbox" id="terms" class="mr-2" required />
+          <label for="terms">I agree to the Terms &amp; Conditions</label>
+        </div>
+        <p class="text-sm">Business users: To access the premium trial, please verify your business details via your dashboard.</p>
+        <button type="submit" class="w-full py-3 bg-gold text-gray-900 font-semibold rounded hover:bg-yellow-500 transition">Create Account</button>
+      </form>
+      <p class="mt-4 text-center">Already have an account? <a href="login.html" class="underline hover:text-gold">Login Here</a></p>
+    </div>
+  </section>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

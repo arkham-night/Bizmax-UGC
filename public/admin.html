@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Panel - Bizmax UGC</title>
+  <link rel="icon" href="assets/images/favicon.ico" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-200">
+  <section id="adminLoginSection" class="min-h-screen flex items-center justify-center">
+    <div class="w-full max-w-md bg-gray-800 p-8 rounded shadow">
+      <h2 class="text-3xl font-bold mb-6 text-center">Admin Login</h2>
+      <form id="adminLoginForm" class="space-y-4">
+        <input type="text" id="adminUsername" placeholder="Username" class="w-full p-3 rounded bg-gray-700" required />
+        <input type="password" id="adminPassword" placeholder="Password" class="w-full p-3 rounded bg-gray-700" required />
+        <button type="submit" class="w-full py-3 bg-gold text-gray-900 font-semibold rounded hover:bg-yellow-500 transition">Login</button>
+      </form>
+    </div>
+  </section>
+  <section id="adminDashboard" class="hidden">
+    <nav class="bg-gray-800 p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <h2 class="text-2xl font-bold">Admin Panel</h2>
+        <button id="adminLogout" class="px-4 py-2 bg-gold text-gray-900 rounded hover:bg-yellow-500 transition">Logout</button>
+      </div>
+    </nav>
+    <div class="container mx-auto py-8">
+      <section class="mb-12">
+        <h3 class="text-3xl font-bold mb-4">User Management</h3>
+        <input type="text" id="userSearch" placeholder="Search users by email or name" class="w-full p-3 bg-gray-700 rounded mb-4" />
+        <div class="overflow-x-auto">
+          <table class="min-w-full bg-gray-800">
+            <thead>
+              <tr>
+                <th class="px-4 py-2 border">ID</th>
+                <th class="px-4 py-2 border">Name</th>
+                <th class="px-4 py-2 border">Email</th>
+                <th class="px-4 py-2 border">Verified</th>
+                <th class="px-4 py-2 border">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="usersTable">
+              <tr>
+                <td class="px-4 py-2 border">1</td>
+                <td class="px-4 py-2 border">Admin</td>
+                <td class="px-4 py-2 border">admin@example.com</td>
+                <td class="px-4 py-2 border">true</td>
+                <td class="px-4 py-2 border">
+                  <button class="px-2 py-1 bg-electricblue text-gray-900 rounded hover:bg-blue-500 transition">Edit</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-8">
+          <h4 class="text-2xl font-bold mb-4">Business Verification Requests</h4>
+          <p>Coming Soon: Process and verify business accounts.</p>
+        </div>
+      </section>
+      <section class="mb-12">
+        <h3 class="text-3xl font-bold mb-4">Ticket Management</h3>
+        <p>Coming Soon: View and process user tickets for increased usage or premium upgrades.</p>
+      </section>
+      <section class="mb-12">
+        <h3 class="text-3xl font-bold mb-4">Revenue Dashboard</h3>
+        <p>Coming Soon: Visual charts and payment history will be displayed here.</p>
+      </section>
+      <section>
+        <h3 class="text-3xl font-bold mb-4">Master Control</h3>
+        <p>Update all API integrations, dummy data, and configuration settings below without touching code.</p>
+        <form id="settingsForm" class="space-y-4 mt-4">
+          <div>
+            <label class="block mb-2 font-semibold">Razorpay Key</label>
+            <input type="text" id="razorpayKey" placeholder="DUMMY_RAZORPAY_KEY" class="w-full p-3 bg-gray-700 rounded" />
+          </div>
+          <div>
+            <label class="block mb-2 font-semibold">Razorpay Endpoint</label>
+            <input type="text" id="razorpayEndpoint" placeholder="https://dummy-razorpay.com/api" class="w-full p-3 bg-gray-700 rounded" />
+          </div>
+          <div>
+            <label class="block mb-2 font-semibold">OpenAI Key</label>
+            <input type="text" id="openaiKey" placeholder="DUMMY_OPENAI_KEY" class="w-full p-3 bg-gray-700 rounded" />
+          </div>
+          <button type="submit" class="w-full py-3 bg-gold text-gray-900 font-semibold rounded hover:bg-yellow-500 transition">Save Settings</button>
+        </form>
+      </section>
+    </div>
+  </section>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

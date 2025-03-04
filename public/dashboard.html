@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard - Bizmax UGC</title>
+  <link rel="icon" href="assets/images/favicon.ico" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-200">
+  <nav class="bg-gray-800 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <ul class="flex space-x-6">
+        <li><a href="dashboard.html" class="hover:text-gold">My Content</a></li>
+        <li><a href="dashboard.html#generate" class="hover:text-gold">Generate New Content</a></li>
+        <li><a href="dashboard.html#usage" class="hover:text-gold">Usage Stats</a></li>
+        <li><a href="profile.html" class="hover:text-gold">Profile</a></li>
+        <li><a href="settings.html" class="hover:text-gold">Settings</a></li>
+      </ul>
+      <button class="px-4 py-2 bg-gold text-gray-900 rounded hover:bg-yellow-500 transition">Upgrade Plan</button>
+    </div>
+  </nav>
+  <section class="container mx-auto py-12">
+    <h2 class="text-4xl font-bold mb-8 text-center">Dashboard Overview</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-gray-800 p-6 rounded shadow">
+        <h3 class="text-2xl font-semibold mb-4">API Usage</h3>
+        <div class="w-full bg-gray-700 rounded-full h-3">
+          <div class="bg-gold h-3 rounded-full" style="width: 50%;"></div>
+        </div>
+        <p class="mt-2">50% used</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded shadow">
+        <h3 class="text-2xl font-semibold mb-4">Content Generation Limit</h3>
+        <div class="w-full bg-gray-700 rounded-full h-3">
+          <div class="bg-gold h-3 rounded-full" style="width: 70%;"></div>
+        </div>
+        <p class="mt-2">70% used</p>
+      </div>
+    </div>
+  </section>
+  <section id="generate" class="container mx-auto py-12">
+    <h2 class="text-4xl font-bold mb-8 text-center">Generate New Content</h2>
+    <form id="contentForm" class="max-w-2xl mx-auto space-y-6">
+      <textarea id="contentInput" placeholder="Enter your script or text here..." class="w-full p-4 bg-gray-800 rounded" required></textarea>
+      <select id="voiceOptions" class="w-full p-4 bg-gray-800 rounded">
+        <option value="default">Default Voice</option>
+        <option value="indian">Indian Accent</option>
+      </select>
+      <button type="submit" class="w-full py-3 bg-gold text-gray-900 font-semibold rounded hover:bg-yellow-500 transition">Generate Content</button>
+    </form>
+    <div id="generatedContent" class="mt-8 text-center">
+      <p>Coming Soon: Your AI generated content will appear here.</p>
+    </div>
+  </section>
+  <section class="container mx-auto py-12">
+    <div class="bg-gray-800 p-6 rounded shadow mb-6">
+      <h3 class="text-xl font-bold mb-2">Security &amp; Tracking</h3>
+      <p>IP/Device Tracking: <span>Coming Soon</span></p>
+      <p>VPN Detection: <span>Coming Soon</span></p>
+    </div>
+    <div class="bg-gray-800 p-6 rounded shadow">
+      <h3 class="text-xl font-bold mb-2">Notifications</h3>
+      <p>No new notifications.</p>
+    </div>
+  </section>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

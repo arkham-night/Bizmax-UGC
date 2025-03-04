@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login - Bizmax UGC</title>
+  <link rel="icon" href="assets/images/favicon.ico" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-200">
+  <header class="sticky top-0 z-50 bg-gray-800">
+    <nav class="container mx-auto flex justify-between items-center py-4">
+      <div class="text-2xl font-bold">Bizmax UGC</div>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="hover:text-gold">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="min-h-screen flex items-center justify-center">
+    <div class="w-full max-w-md bg-gray-800 p-8 rounded shadow">
+      <h2 class="text-3xl font-bold mb-6 text-center">Login</h2>
+      <form id="loginForm" class="space-y-4">
+        <input type="email" id="loginEmail" placeholder="Email" class="w-full p-3 rounded bg-gray-700" required />
+        <input type="password" id="loginPassword" placeholder="Password" class="w-full p-3 rounded bg-gray-700" required />
+        <a href="#" class="text-sm underline hover:text-gold">Forgot Password?</a>
+        <button type="submit" class="w-full py-3 bg-gold text-gray-900 font-semibold rounded hover:bg-yellow-500 transition">Login</button>
+        <p class="text-center">Or <a href="signup.html" class="underline hover:text-gold">Sign Up</a></p>
+        <button type="button" class="w-full py-3 bg-electricblue text-gray-900 font-semibold rounded hover:bg-blue-500 transition">Sign in with Gmail</button>
+      </form>
+    </div>
+  </section>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>
